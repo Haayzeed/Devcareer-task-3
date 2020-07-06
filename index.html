@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left Side -->
+      <div class="col-md-4 left-banner">
+        <div class="col-md-10 offset-md-1 text-center">
+          <img src="images/img.jpg" class="img-thumbnail" alt="Dosunmu Afeez">
+          <button class="btn btn-lg my-btn font-weight-bold mt-3">Master Builder</button>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="col-md-8 content pt-3">
+        <div class="row">
+          <div class="col-md-12 theme-switcher d-flex justify-content-end">
+            <a href="https://devcareer.io/account/signup" class="mr-2 font-weight-bold"><i class="fas fa-arrow-left"></i> Create your <span style="color: #FBCC6B">Devcareer.io</span> page</a>
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        <section class="col-md-10 offset-md-1 content-body">
+          <div class="col-md-12">
+            <h1 class="font-weight-bold"><span class="text-uppercase">dosunmu</span> Afeez</h1>
+            <p><span>Frontend Developer</span> <span>Javascript Developer</span> <span>System Analyst</span></p>
+            <hr>
+            <p class="about">I'm a Frontend Developer who has passion for creating awesome interfaces for users using mordern technologies.</p>
+            <h5 class="font-weight-bold find">Find me on</h5>
+            <p class="social-media">
+              <a href="https://facebook.com/haayzeed.dosunmu"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://github.com/Haayzeed"><i class="fab fa-github"></i></a>
+              <a href="https://instagram.com/Haayzeed_"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com/in/afeez-dosunmu-b81a8519b"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/iamdosunmuafeez"><i class="fab fa-twitter"></i></a>
+            </p>
+
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+      toggleSwitch.checked = true;
+    }
+  }
+
+  function switchTheme(e) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    else {        document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+
+
+</script>
