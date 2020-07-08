@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Devcareer Dark Mode">
+  <meta name="keywords" content="Dark, Mode, Dark Mode">
+  <meta name="author" content="Dosunmu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dark Mode</title>
+  <link rel="preload" as="script" href="js/dark.js">
+  <link rel="preload" as="style" href="css/style.css">
+  <link rel="preload" as="image" href="images/img.jpg">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -56,31 +62,4 @@
 
 </body>
 </html>
-<script>
-  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-  const currentTheme = localStorage.getItem('theme');
-
-  if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-      toggleSwitch.checked = true;
-    }
-  }
-
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    }
-    else {        document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-
-
-
-</script>
+<script src="js/dark.js"></script>

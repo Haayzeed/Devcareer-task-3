@@ -4,20 +4,18 @@
   --primary-color: #302AE6;
   --secondary-color: #536390;
   --font-color: #424242;
-  --bg-color: #fff;
+  --bg-color: #05B993;
   --heading-color: #292922;
   --slider-color: #000;
-  --span-color: #272727;
 }
 
 [data-theme="dark"] {
   --primary-color: #9A97F3;
   --secondary-color: #818cab;
-  --font-color: #fff;
-  --bg-color: #121212;
+  --font-color: #e1e1ff;
+  --bg-color: red;
   --heading-color: #818cab;
   --slider-color: #fff;
-  --span-color: #272727;
 }
 
 body {
@@ -120,7 +118,7 @@ input:checked + .slider:before {
   margin-top: 30px;
 }
 .content-body p span{
-  background: var(--span-color);
+  background-color: red;
   color: #fff;
   padding: 10px;
   margin-right: 10px;
