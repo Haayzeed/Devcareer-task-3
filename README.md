@@ -1,4 +1,4 @@
-# Devcareer-task-3
+# Devcareer-task-3 with Theme Switcher
 
 This is a Mini Project from DevCareer. 
 It is a mini profile page with a theme switcher
